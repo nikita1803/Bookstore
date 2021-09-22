@@ -1,0 +1,67 @@
+
+.loginbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0% 0% 0% 14%;
+    height: 55%;
+    
+}
+.Email-head{
+    margin: 0%;
+}
+.Password-head{
+    margin-top: -3%;
+    margin-bottom: 0%;
+}
+.placewidth{
+    width: 83%;
+    margin-top: -1%;
+}
+.forgetPassword{
+    display: flex;
+    width: 83%;
+    justify-content: flex-end;
+    margin-top: -20px;
+}
+.forget-head{
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.login-button{
+    margin-top: 20px;
+    width: 86%;
+    height: 35px;
+    background-color: #A03037;
+    //justify-content: center;
+}
+.login-button-input{
+    width: 86%;
+    background-color: #A03037;
+    margin-left: 18px;
+    height: 33px;
+    
+}
+.text{
+    width: 86%;
+    display: flex;
+    justify-content: center;
+    padding-top:5%;
+    height: 30px;
+}
+.divider{
+    width: 30%; 
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.alternateButton{
+    display: flex;
+    justify-content: space-around;
+    width: 83%;
+    margin-top: 10px;
+    margin-left: 10px;
+    //background-color: burlywood;
+}
