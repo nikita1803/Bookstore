@@ -1,0 +1,17 @@
+<!--<p>sub-head-display works!</p>-->
+<div class="main">
+    <div class = "middleHead">
+        <div class = "bookTxt">
+            Books 
+            <h5 class = "items"></h5>
+        </div>
+        <div style="margin-top: -50px;">
+            <button mat-stroked-button [matMenuTriggerFor]="menu" class = "dropdown" style="margin-top: -80px;">sort by relevance</button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>Price: Low to High</button>
+                    <button mat-menu-item>Price: High to Low</button>
+                    <button mat-menu-item>Newest Arrivals</button>
+                </mat-menu>
+        </div>
+    </div>
+</div>

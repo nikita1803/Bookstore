@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
         console.log(dataLogin)
         localStorage.setItem("email", dataLogin["email"]);
         localStorage.setItem("token", dataLogin.result.accessToken);
-        this.router.navigate(['/home'])
+        this.router.navigate(['/home']);
         
       },
       error => {
