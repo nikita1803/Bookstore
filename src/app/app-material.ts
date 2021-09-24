@@ -9,6 +9,7 @@ import { MatDividerModule} from '@angular/material/divider';
 import { MatListModule} from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
     imports: [
@@ -22,7 +23,8 @@ import { MatBadgeModule } from '@angular/material/badge';
         MatDividerModule,
         MatListModule,
         MatMenuModule,
-        MatBadgeModule
+        MatBadgeModule,
+        MatPaginatorModule
     ],
     exports:[
         MatFormFieldModule,
@@ -35,7 +37,8 @@ import { MatBadgeModule } from '@angular/material/badge';
         MatDividerModule,
         MatListModule,
         MatMenuModule,
-        MatBadgeModule
+        MatBadgeModule,
+        MatPaginatorModule
     ]
     
 })

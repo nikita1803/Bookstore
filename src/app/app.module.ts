@@ -12,6 +12,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomepageDisplayComponent } from './components/homepage-display/homepage-display.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SubHeadDisplayComponent } from './components/sub-head-display/sub-head-display.component';
+import { BooksDisplayComponent } from './components/books-display/books-display.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SubHeadDisplayComponent } from './components/sub-head-display/sub-head-
     HeaderComponent,
     HomepageDisplayComponent,
     FooterComponent,
-    SubHeadDisplayComponent
+    SubHeadDisplayComponent,
+    BooksDisplayComponent,
+    
   ],
   imports: [
     BrowserModule,
