@@ -1,0 +1,144 @@
+.bookdisplay{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.bookcard {
+    width: 235px;
+    height: 275px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E2E2;
+    border-radius: 3px;
+    opacity: 1;
+    margin: 0px 0px 32px 38px;
+    cursor: pointer;
+}
+.bookcard :hover{
+    box-shadow: 2px 11px 5px 5px rgba(173, 170, 170, 0.8);
+}
+.descriptionblock {
+    height: 115px;
+    width: 233px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E2E2;
+    border-radius: 0px 0px 3px 3px;
+    opacity: 1;
+    border-top: transparent;
+}
+.bookImg{
+    width: 233px;
+    height: 172px;
+    background: #efefef 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E2E2;
+    border-bottom: transparent;
+    border-radius: 2px 2px 0px 0px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    width: 105px;
+    height: 135px;
+}
+.description{
+    padding: 9px 0px 0px 20px;
+    font: normal normal normal 14px/19px Roboto;
+    letter-spacing: 0px;
+    width: 190px;
+    color: #0A0102;
+    opacity: 1;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div.description:hover {
+    overflow: visible;
+}
+.author{
+    font: normal normal normal 10px/13px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+    opacity: 1;
+    padding-left: 20px;
+    margin-bottom: 7px;
+}
+.quantityAndRate{
+    padding-left: 20px; margin-bottom: 5px;
+    display: flex;
+    height: 15px;
+}
+.rate{
+    width: 33px;
+    height: 16px;
+    background: #388E3C 0% 0% no-repeat padding-box;
+    border-radius: 1px;
+    opacity: 1;
+    display: flex;
+    align-items: baseline;
+    padding-left: 3px;
+}
+.star{
+    color: white;
+    font-size: 10px;
+}
+.price{
+    padding-left: 20px;
+    margin: 0;
+    width: 50px;
+    height: 16px;
+    text-align: left;
+    font: normal normal bold 12px/18px Roboto;
+    letter-spacing: 0px;
+    color: #0A0102;
+    opacity: 1;
+}
+.view{
+    position: relative;
+    right: -35%;
+    top: -110%;
+    background-color: #888888;
+    width: 65px;
+    color: #FFFFFF;
+    height: 16px;
+    font-size: smaller;
+    visibility: hidden;
+    padding: 0px 3px 2px 3px;
+}
+.bookcard :hover .view {
+   visibility: visible; 
+}
+.alternateButton{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 28px;
+}
+.addCartButton{
+    width: 42%; 
+    background-color: #A03037; 
+    color: #FFFFFF; 
+    border: 0; 
+    cursor: pointer;
+}
+.addCartButton:hover{
+    box-shadow: 2px 2px 5px 3px rgba(173, 170, 170, 0.8);
+}
+.whishlist{
+    width: 42%; 
+    color:white; 
+    background-color: #616161; 
+    border: 0; 
+    cursor: pointer;
+}
+.whishlist:hover{
+    box-shadow: 2px 2px 5px 3px rgba(173, 170, 170, 0.8);
+}
+.addedCart{
+    width: 85%; 
+    background-color: #5a5a5a; 
+    color: #FFFFFF; 
+    border: 0; 
+    border-radius: 4px;
+}
