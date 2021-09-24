@@ -2,25 +2,21 @@
     background-color: #A03037;
     height: 60px;
 }
-
-.headerContent{
+.mainhead{
     height: 60px;
     display: flex;
-    align-items: center;
+    align-items: center;    
 }
-
 .Img{
     height: 24px;
     margin-left: 16%;
     cursor: pointer;
 }
-
 .heading{
     margin: 0;
     color: #FFFFFF;
     padding: 0px 45px 0px 9px;
 }
-
 .search {
     display: flex;
     flex-wrap: nowrap;
@@ -41,62 +37,50 @@
     outline: none;
     border: transparent;
 }
-
-.rightSection{
+.profile{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 14%;
 }
-
-.rightSection2{
+.bookcart{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 5%;
 }
-
-
 .headerButton {
     color:#FCFCFC;
     cursor: pointer;
     background : #A03037
 }
-
-
 ::ng-deep.mat-badge-content{
     background : #FFFFFF;
     color: #A03037;
 }
-
 ::ng-deep.mat-menu-content:not(:empty){
     width:150px !important;
     padding: 15px 20px 15px 20px;
     display: flex;
     flex-direction: column;
 }
-
 .host ::ng-deep.mat-menu-panel {
     max-width:fit-content !important;
 }
-
 .profileMenu{
     display: flex;
     flex-direction: column;
     margin-left: 15px;
     margin-top: 5px;
 }
-
 ::ng-deep.mat-stroked-button{
     border: 1px solid #A03037;
     border-radius: 2px;
 }
-
 @media (max-width: 1010px){
-    .headerContent{
+    .mainhead{
         width: 430px;
     }
-
 }
 @media (max-width :  768px)
 {
@@ -124,7 +108,7 @@
         margin-left: 6%;
         cursor: pointer;
     }
-    .rightSection{
+    .profile{
         margin-left: 0%;
     }
     .back-icon{
@@ -137,13 +121,11 @@
         width:490px;
         display:inline;
         
-    }
-    
+    }   
     ::ng-deep .search-toggle {
         margin-top: -50px;
         height: 10px;
         width:400px;
         margin-left:-270px;   
-    } 
-    
+    }    
 }

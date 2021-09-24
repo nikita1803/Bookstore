@@ -1,6 +1,6 @@
 <!--<p>header works!</p>-->
 <header class = "header">
-    <div class = "headerContent">
+    <div class = "mainhead">
        <img class = "Img" style = "height: 24px;" src = "../../../assets/education.svg">
        <h2 class = "heading">BOOKSTORE</h2>
        <div class = "search">
@@ -12,7 +12,7 @@
             </mat-menu> 
             <input class = "searchInput" type = "text" placeholder = "Search">
        </div>
-       <div class = "rightSection">
+       <div class = "profile">
            <mat-icon [matMenuTriggerFor] = "menu" class = "headerButton">person</mat-icon>
            <mat-menu class = "profile" #menu = "matMenu" xPosition = "before">
                 <div class = "profileMenu">
@@ -26,7 +26,7 @@
             </mat-menu>
            <h5 style = "margin: 0; color:#FCFCFC;">Profile</h5>
        </div>
-       <div class = "rightSection2">
+       <div class = "bookcart">
            <mat-icon  class = "headerButton"> local_grocery_store</mat-icon>
            <h5 style = "margin: 0; color:#FCFCFC;">Cart</h5>
        </div>
