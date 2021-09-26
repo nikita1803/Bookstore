@@ -21,5 +21,14 @@ export class HttpServiceService {
     let tokenOption = {headers: new HttpHeaders({"x-access-token": token})};
     return this.httpClient.get(url, isHeaderRequired && tokenOption)
   }
-  
+  put(url: string, data: any, isHeaderRequired: any = false, token: any = null) {  
+    console.log("putting add"+ url, token);
+    let tokenOption = {headers: new HttpHeaders({"x-access-token": token})};
+    return this.httpClient.put(url, data, isHeaderRequired && tokenOption)
+  }
+  delete(url: string, isHeaderRequired: any = false, token: any = null) {  
+    console.log("data delete");
+    let tokenOption = {headers: new HttpHeaders({"x-access-token": token})};
+    return this.httpClient.delete(url, isHeaderRequired && tokenOption)
+  }
 }

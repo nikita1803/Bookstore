@@ -10,6 +10,7 @@ import { MatListModule} from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
     imports: [
@@ -24,7 +25,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         MatListModule,
         MatMenuModule,
         MatBadgeModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatRadioModule
     ],
     exports:[
         MatFormFieldModule,
@@ -38,7 +40,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         MatListModule,
         MatMenuModule,
         MatBadgeModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatRadioModule
     ]
     
 })

@@ -27,5 +27,22 @@ export class BookServiceService {
   getCart = (token: any) => {
     return this.httpService.get(`${this.url}/bookstore_user/get_cart_items`, true, token)
   }
+  putAddress = (data: any, token: any) => {
+    return this.httpService.put(`${this.url}/bookstore_user/edit_user`, data, true, token)
+  }
+  order = (data: any, token: any) => {
+    // console.log(data, token)
+    return this.httpService.post(`${this.url}/bookstore_user/add/order`, data, true, token)
+  } 
+  deleteItem = (data: any, token: any) => {
+    console.log(data, token)
+    return this.httpService.delete(`${this.url}/bookstore_user/remove_cart_item/${data}`, true, token)
+  }
+  addwishlist = (data: any, token: any) => {
+    return this.httpService.post(`${this.url}/bookstore_user/add_wish_list/${data.id}`, {}, true, token)
+  }
+  getWishlist = (token: any) => {
+    return this.httpService.get(`${this.url}/bookstore_user/get_wishlist_items`, true, token)
+  }
   
 }

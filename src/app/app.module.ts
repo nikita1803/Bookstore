@@ -13,6 +13,10 @@ import { HomepageDisplayComponent } from './components/homepage-display/homepage
 import { FooterComponent } from './components/footer/footer.component';
 import { SubHeadDisplayComponent } from './components/sub-head-display/sub-head-display.component';
 import { BooksDisplayComponent } from './components/books-display/books-display.component';
+import { BookPageComponent } from './components/book-page/book-page.component';
+import { AddCartComponent } from './components/add-cart/add-cart.component';
+import { PlacedOrderComponent } from './components/placed-order/placed-order.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 
 @NgModule({
@@ -26,6 +30,10 @@ import { BooksDisplayComponent } from './components/books-display/books-display.
     FooterComponent,
     SubHeadDisplayComponent,
     BooksDisplayComponent,
+    BookPageComponent,
+    AddCartComponent,
+    PlacedOrderComponent,
+    WishlistComponent,
     
   ],
   imports: [
