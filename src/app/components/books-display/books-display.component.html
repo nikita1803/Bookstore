@@ -1,8 +1,8 @@
 <div class="bookdisplay">
     <ng-container *ngFor="let book of books "  >
         <div class=" bookcard ">
-            <div class="bookImg" routerLink="productpage">
-                <img class="img" src="../../../assets/books/Image 36.png">
+            <div class="bookImg" routerLink="bookpage">
+                <img (click)="bookPage(book)" class="img" src="../../../assets/books/Image 36.png">
             </div> 
             <div class="descriptionblock ">
                 <h5 class="description" >{{book.description}}</h5>

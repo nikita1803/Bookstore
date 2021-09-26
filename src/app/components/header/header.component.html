@@ -17,7 +17,7 @@
            <mat-menu class = "profile" #menu = "matMenu" xPosition = "before">
                 <div class = "profileMenu">
                     <h5>Profile</h5>
-                    <h5>My Orders</h5>
+                    <h5 >My Orders</h5>
                     <h5 style = "cursor: pointer">My Wishlist</h5>
                 </div>
                 <button class = "button" mat-stroked-button>
@@ -26,9 +26,9 @@
             </mat-menu>
            <h5 style = "margin: 0; color:#FCFCFC;">Profile</h5>
        </div>
-       <div class = "bookcart">
-           <mat-icon  class = "headerButton"> local_grocery_store</mat-icon>
-           <h5 style = "margin: 0; color:#FCFCFC;">Cart</h5>
+       <div class = "bookcart" routerLink="cart" >
+           <mat-icon  class = "headerButton" (click)="cartPage()"> local_grocery_store</mat-icon>
+           <h5 style = "margin: 0; color:#FCFCFC;" >Cart</h5>
        </div>
     </div>
 </header>

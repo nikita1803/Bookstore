@@ -1,0 +1,78 @@
+<!--<p>book-page works!</p>-->
+
+<div class = "container">
+    <app-header></app-header>
+
+    <!-- Book Content -->
+    <div >
+    <div class = "mainblock">
+        <div class = "sub-heading" style = "margin-left: -30px;">
+            <a (click)="homepage()" >Home</a>/books
+        </div>
+
+        <div class = "bookblock">
+            <div class = "subimg" style = "margin-right: 10px;">
+                <div class = "cell">
+                    <img class = "sideimg" src = "../../../assets/books/Image 1.png">
+                </div>
+                <div class = "cell">
+                    <img class = "sideimg" src = "../../../assets/books/Image 46.png">
+                </div>
+            </div>
+             
+            <div class = "mainImg">
+                <div class = "imgCell">
+                    <img class = "imgMain" src = "../../../assets/books/Image 11.png">
+                </div>
+                <div class = "alternateButton">
+                    <button class = "bag" mat-flat-button color = "primary" (click)="isAddedToCart(data)" >ADD TO BAG</button>
+                    <button class = "wishlist" mat-stroked-button (click)="whishlist(data)"> &#x2764; WISHLIST</button>
+                </div>
+            </div>
+            
+            <div class = "book_description">
+                <p class = "description" >{{data.description}}</p>
+                <p class = "author" >by {{data.author}}</p>
+                <div style = "display: flex;">
+                    <div class = "rate">
+                        <p style = "color: white; margin: 0; width: 20px; height: 19px; text-align: left;
+                        font: normal normal bold 14px/19px Roboto;"> 4.5</p>
+                        <mat-icon class = "star">grade</mat-icon>
+                    </div>
+                    <h5 class = "quantity">({{data.quantity}})</h5>
+                </div>
+                <p class = "price"> Rs. {{data.price}}</p>
+
+                <mat-divider class = "divider"></mat-divider>
+
+                <div class = "details">
+                    <h4 class = "heading">&#x25CF; Book Details</h4>
+                    <div class = "bookContent">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.    
+                    </div>
+                </div>
+                <mat-divider class = "divider" style = "margin-top: -35px;"></mat-divider>
+                <div style = "margin-top: 10px;">
+                    <h3>Coustomer Feedback</h3>
+                    <div class = "review">
+                        <h5 class = "text">overall rating</h5>
+                        <div>
+                            <img src = "../../../assets/books/star2.svg" class = "star" >
+                            <img src = "../../../assets/books/star2.svg" class = "star">
+                            <img src = "../../../assets/books/star2.svg" class = "star">
+                            <img src = "../../../assets/books/star2.svg" class = "star">
+                            <img src = "../../../assets/books/star2.svg" class = "star">
+                        </div>
+                        <div class = "searchInput">
+                            <input class = "searchInput" type = "text" placeholder = "write a review" style = "width: 570px;height: 70px;">
+                        </div>
+                        <div>
+                            <button type = "submit" class = "button" mat-flat-button color = "warn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
