@@ -17,6 +17,10 @@ import { BookPageComponent } from './components/book-page/book-page.component';
 import { AddCartComponent } from './components/add-cart/add-cart.component';
 import { PlacedOrderComponent } from './components/placed-order/placed-order.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { FilterPipe } from './filter.pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { StarsComponent } from './components/stars/stars.component';
+
 
 
 @NgModule({
@@ -34,6 +38,9 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
     AddCartComponent,
     PlacedOrderComponent,
     WishlistComponent,
+    FilterPipe,
+    StarsComponent,
+    
     
   ],
   imports: [
@@ -41,7 +48,9 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     AppMaterial,
-    HttpClientModule
+    HttpClientModule,
+    //Ng2SearchPipeModule
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
