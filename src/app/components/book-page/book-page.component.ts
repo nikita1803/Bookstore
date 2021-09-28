@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BookServiceService } from 'src/app/services/book-service.service';
 import { CountService } from 'src/app/services/count.service';
@@ -6,7 +7,8 @@ import { CountService } from 'src/app/services/count.service';
 @Component({
   selector: 'app-book-page',
   templateUrl: './book-page.component.html',
-  styleUrls: ['./book-page.component.scss']
+  styleUrls: ['./book-page.component.scss'],
+  
 })
 export class BookPageComponent implements OnInit {
   data: any
@@ -20,15 +22,35 @@ export class BookPageComponent implements OnInit {
   bookId: any
   homeBook: any
   cartBook: any
-  
+
+  title = 'My Angular Project!';
+  todaydate: any;
+   componentproperty: any;
+   comment: any;
+   formdata: any;
+   currentVal : any;
+   //countItem:any
+   //badgeContent: any;
   constructor(private router: Router,private service: BookServiceService,private count: CountService) { 
     this.data = this.router.getCurrentNavigation()?.extras.state;
     console.log(this.data)
   }
-
+  getVal(val:any){
+    console.warn(val);
+    this.currentVal=val
+  }
   ngOnInit(): void {
+    
     this.token = localStorage.getItem('token') 
     this.getData()
+    //this.count.sendMessage.subscribe((message: any) =>{
+     // this.countItem = message
+     // console.log("Header count "+ this.countItem)
+    //  this.badgeContent = this.countItem;
+    //},
+    //error => {
+    //  console.log(error);
+    //});
   }
   getData = () => {
     this.data = this.data['value']
@@ -64,5 +86,6 @@ export class BookPageComponent implements OnInit {
       console.log(error);
     });
   }
+  
 
 }

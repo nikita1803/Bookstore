@@ -56,21 +56,18 @@
                     <h3>Coustomer Feedback</h3>
                     <div class = "review">
                         <h5 class = "text">overall rating</h5>
-                        <div>
-                            <img src = "../../../assets/books/star2.svg" class = "star" >
-                            <img src = "../../../assets/books/star2.svg" class = "star">
-                            <img src = "../../../assets/books/star2.svg" class = "star">
-                            <img src = "../../../assets/books/star2.svg" class = "star">
-                            <img src = "../../../assets/books/star2.svg" class = "star">
-                        </div>
-                        <div class = "searchInput">
-                            <input class = "searchInput" type = "text" placeholder = "write a review" style = "width: 570px;height: 70px;">
+                        <app-stars></app-stars>
+                        
+                        <div class = "searchInput" >
+                            <textarea matInput class = "searchInput" type = "text" placeholder = "write a review" style = "width: 570px;height: 70px;"  name="comment" #box></textarea>
                         </div>
                         <div>
-                            <button type = "submit" class = "button" mat-flat-button color = "warn">Submit</button>
+                            <button type = "submit" class = "button" mat-flat-button color = "warn" (click)="getVal(box.value)">Submit</button>
                         </div>
+                        
                     </div>
                 </div>
+                    <h2>{{currentVal}}</h2>
             </div>
         </div>
     </div>
