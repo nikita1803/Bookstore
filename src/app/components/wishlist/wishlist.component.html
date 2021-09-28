@@ -1,1 +1,38 @@
-<p>wishlist works!</p>
+<!--<p>wishlist works!</p>-->
+<div class="container">
+    <app-header></app-header>
+
+    <div class="main">
+        <div style="background-color: #FFFFFF; height: 5%; padding-top: 14px">
+            <a (click)="homepage()">Home</a>/My Wishlist
+        </div>
+        <div class="cart">            
+            <div style="width: 100%;">
+                <div style="width: 105%;height: 30px;background-color: #E4E4E4;display: flex;padding-top: 10px;padding-left: 20px;margin-left: -30px;margin-top:-10px;">
+                <h3 style="font-weight: bold;">My Wishlist({{wishlistBook.length}})</h3>
+                </div>
+                <ng-container *ngFor="let list of wishlistBook">
+                    <div style="display: flex; justify-content: space-between;" >
+                        <div class="book" style=" flex-direction: row;">
+                            <img src="../../../assets/books/Image 11.png">
+                            <div style="margin-left: 20px;">
+                                <h4 style="width: 300px; margin-bottom: 0;">{{list.product_id.description}}</h4>
+                                <h5 style="margin-bottom: 5px; color: #9D9D9D;">by {{list.product_id.author}}</h5>
+                                <span style="font: normal normal bold 15px/18px Lato;
+                                letter-spacing: 0px;
+                                color: #0A0102;
+                                opacity: 1;">Rs. {{list.product_id.price}}</span>
+                            </div>
+                        </div>
+                        <div class="remove">
+                            <mat-icon (click)="removeItem(list)" style="cursor: pointer;">delete</mat-icon>
+                        </div>
+                    </div>
+                    <mat-divider style="width: 107%;margin-left:-30px;"></mat-divider>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <app-footer class="footer"></app-footer>
+</div>
