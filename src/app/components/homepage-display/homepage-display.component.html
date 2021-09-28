@@ -1,11 +1,11 @@
 <!--<p>homepage-display works!</p>-->
 <div>
-    <app-header></app-header>
+    <app-header (searchcriteria)="searchThis($event)"></app-header>
     <div>
         <app-sub-head-display></app-sub-head-display>
     </div>
     <div>
-        <app-books-display></app-books-display>
+        <app-books-display [searchText]="searchText"></app-books-display>
     </div>
     <app-footer></app-footer>
 </div>

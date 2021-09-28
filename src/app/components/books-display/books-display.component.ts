@@ -1,17 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { getNumberOfCurrencyDigits } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute,  Router } from '@angular/router';
 import { BookServiceService } from 'src/app/services/book-service.service';
 import { CountService } from 'src/app/services/count.service';
+import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-books-display',
   templateUrl: './books-display.component.html',
-  styleUrls: ['./books-display.component.scss']
+  styleUrls: ['./books-display.component.scss'],
+
 })
 export class BooksDisplayComponent implements OnInit {
   p: number = 1 ;
-  @Input() books: any ;
-  
+  @Input() books: any; 
+  @Input() searchText:any;
   id:any
   cartBooks: Array<any> =[];
   cart1:any
@@ -20,12 +22,21 @@ export class BooksDisplayComponent implements OnInit {
   bookId: any
   homeBook: any
   cartBook: any
+  searchWord: any;
 
-  constructor(private router: Router, private service: BookServiceService,  private route: ActivatedRoute , private count: CountService) { }
+  constructor(private router: Router, private service: BookServiceService,  private route: ActivatedRoute , private count: CountService ) { 
+    
+  }
+ 
 
   ngOnInit(): void {
-    this.token = localStorage.getItem('token')    
-    // console.log(this.token);
+    this.service.rcvSearch.subscribe((response: any) => {
+      this.searchWord = response;
+      // this.totalLength = response.length;
+    });
+    this.token = localStorage.getItem('token')
+    console.log(this.searchText);
+    //console.log(this.token);
    
 }
 getCount(){
@@ -59,5 +70,6 @@ bookPage(id: any){
   this.id = id
   this.router.navigate(['bookpage/'], {state: {value: id }})
 }
+
 
 }

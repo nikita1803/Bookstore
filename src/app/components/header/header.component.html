@@ -10,7 +10,7 @@
             <mat-menu #menu1 = "matMenu" class = "search-toggle"  xPosition = "after"style = "width:800px" >
                 <span><input mat-menu-item class = "search-toggle-item" aria-label = "Search" type = "text" placeholder  =  "Search"></span>
             </mat-menu> 
-            <input class = "searchInput" type = "text" placeholder = "Search">
+            <input class = "searchInput" name="searchText" type = "text" placeholder = "Search" #search (keyup)="shareSearchWord(search.value)"> 
        </div>
        <div class = "profile">
            <mat-icon [matMenuTriggerFor] = "menu" class = "headerButton">person</mat-icon>
@@ -18,7 +18,7 @@
                 <div class = "profileMenu">
                     <h5>Profile</h5>
                     <h5 >My Orders</h5>
-                    <h5 style = "cursor: pointer">My Wishlist</h5>
+                    <h5 style = "cursor: pointer" (click)="wishlist()">My Wishlist</h5>
                 </div>
                 <button class = "button" mat-stroked-button>
                     Log Out
@@ -27,8 +27,9 @@
            <h5 style = "margin: 0; color:#FCFCFC;">Profile</h5>
        </div>
        <div class = "bookcart" routerLink="cart" >
-           <mat-icon  class = "headerButton" (click)="cartPage()"> local_grocery_store</mat-icon>
+           <mat-icon [matBadge]="badgeContent" matBadgeSize="small" class = "headerButton" (click)="cartPage()"> local_grocery_store</mat-icon>
            <h5 style = "margin: 0; color:#FCFCFC;" >Cart</h5>
        </div>
     </div>
 </header>
+

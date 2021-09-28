@@ -1,5 +1,5 @@
 <div class="bookdisplay">
-    <ng-container *ngFor="let book of books "  >
+    <ng-container *ngFor="let book of books  | search: searchWord "  >
         <div class=" bookcard ">
             <div class="bookImg" routerLink="bookpage">
                 <img (click)="bookPage(book)" class="img" src="../../../assets/books/Image 36.png">
