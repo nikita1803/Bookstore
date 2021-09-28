@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { HttpServiceService } from './http-service.service';
 import { environment } from 'src/environments/environment';
-
+import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class BookServiceService {
   private refresh = new Subject<void>();
-
+  private search = new BehaviorSubject([]);
+  rcvSearch = this.search.asObservable();
   getRefreshedData() {
     return this.refresh;
   }
@@ -44,5 +45,15 @@ export class BookServiceService {
   getWishlist = (token: any) => {
     return this.httpService.get(`${this.url}/bookstore_user/get_wishlist_items`, true, token)
   }
-  
+  deleteWishlist = (data: any, token: any) => {
+    console.log(data, token)
+    return this.httpService.delete(`${this.url}/bookstore_user/remove_wishlist_item/${data}`, true, token)
+  }
+  getallBook(url: any) {
+    console.log("given data is", url);
+    return this.httpService.getallBook(url);
+  }
+  sendSearch(searchWord: any) {
+    this.search.next(searchWord);
+  }
 }

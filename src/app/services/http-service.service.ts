@@ -31,4 +31,7 @@ export class HttpServiceService {
     let tokenOption = {headers: new HttpHeaders({"x-access-token": token})};
     return this.httpClient.delete(url, isHeaderRequired && tokenOption)
   }
+  getallBook(url: any) {
+    return this.httpClient.get(this.url + url);
+  }
 }
