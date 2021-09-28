@@ -24,7 +24,7 @@ export class AddCartComponent implements OnInit {
   removeById: any
   token: any
   length: any
-
+  quantity: number = 1;
   public contactForm!: FormGroup;
 
   constructor(private router: Router, private formBuilder: FormBuilder,private bookService: BookServiceService,private count:CountService ) { }
@@ -46,7 +46,21 @@ export class AddCartComponent implements OnInit {
     this.displayAddress = false
     this.displayButton = false
   }
-
+  i = 1
+  increment(data: { product_id: { quantity: any; }; }) {
+    if (this.i != data.product_id.quantity) {
+      this.i++;
+      this.quantity = this.i;
+      console.log(data.product_id.quantity);
+    }
+  }
+  decrement() {
+    if (this.i != 1) {
+      this.i--;
+      this.quantity = this.i;
+      console.log(this.quantity);
+    }
+  }
   continue(){
     this.displayCart = false
     this.displayContinueButton = false

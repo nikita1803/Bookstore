@@ -9,37 +9,50 @@
     // height: 100%;
     background-color: #FFFFFF;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
+    //background-color: crimson;
 }
 
 .main{
     height: 100%;
-    margin: 5% 253px 5% 253px;
+    width:70%;
+    margin: 5% 253px 5% 230px;
+    //background-color: cyan;
+    display: flex;
+    flex-wrap: wrap;
 }
 .sub-head{
     background-color: #FFFFFF; 
     height: 5%; 
+    width: 100%;
     padding-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    //background-color: darkmagenta;
 }
 
 .cart{
-    width: 774px;
+    width: 100%;
     // height: 251px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #d1d0d0;
     border-radius: 1px;
     padding: 10px 30px 10px 30px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    //background-color: darkorange;
 }
 
 .book{
     width: 256px;
-    height: 89px;
+    height: 99px;
     opacity: 1;
     margin-top: 35px;
     display: flex;
+    //background-color: gold;
 }
 
 img{
@@ -50,37 +63,47 @@ img{
 }
 
 .location{
-    width: 275px;
-    height: 40px;
+    width: 100%;
+    height: 30%;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #DCDCDC;
     border-radius: 1px;
     opacity: 1;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    //background-color: forestgreen;
 }
 
 .placeOrder{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    width: 30%;
+    //height: 80%;
     justify-content: space-between;
+    //background-color: dodgerblue;
 }
 
 .order{
-    width: 151px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 161px;
     height: 35px;
     background: #3371B5 0% 0% no-repeat padding-box;
     border-radius: 2px;
     opacity: 1;
-    display: flex;align-items: center; justify-content: center;
+    align-items: center; 
+    justify-content: center;
     color: #FFFFFF;
-    margin-left: 125px;
+    margin-left: 140px;
     cursor: pointer;
+    //background-color: gold;
 }
 
 .address{
-    width: 805px;
+    width: 100%;
     height: 60px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #DCDCDC;
@@ -88,8 +111,10 @@ img{
     opacity: 1;
     margin-top: 13px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding-left: 30px;
+   // background-color:deeppink;
 }
 
 .custermerAddress{
@@ -192,4 +217,23 @@ img{
         margin-left: 9%
     }
 
+}
+@media (max-width: 768px){
+    .main{
+        height: 100%;
+        width:80%;
+        margin: 5% 253px 5% 80px;
+        background-color: cyan;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .placeOrder{
+        width: 40%;
+        //background-color: dodgerblue;
+    }
+    .order{
+        margin-right: 100px;
+        cursor: pointer;
+        //background-color: gold;
+    }
 }
