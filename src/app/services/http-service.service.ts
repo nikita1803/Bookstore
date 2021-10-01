@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -34,4 +34,9 @@ export class HttpServiceService {
   getallBook(url: any) {
     return this.httpClient.get(this.url + url);
   }
+  public getJSON(): Observable<any> {
+    console.log("json data");
+    const url= 'src/app/components/myprofile/myProfile.json';
+    return this.httpClient.get(url);
+}
 }
