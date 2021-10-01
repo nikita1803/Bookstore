@@ -8,6 +8,7 @@ import { BookPageComponent } from './components/book-page/book-page.component';
 import { AddCartComponent } from './components/add-cart/add-cart.component';
 import { PlacedOrderComponent } from './components/placed-order/placed-order.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { MyprofileComponent } from './components/myprofile/myprofile.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'cart',component: AddCartComponent },
   { path: 'placedorder', component: PlacedOrderComponent },
   { path: 'wishlist', component: WishlistComponent },
+  { path: "myprofile",component:MyprofileComponent}
   
 ];
 

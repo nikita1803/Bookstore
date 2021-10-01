@@ -1,0 +1,15 @@
+{
+    "person": [
+    
+        {
+        "full-name":"Nikita Rai",
+        "email": "rainikita595@gmail.com",
+        "password": "nikita18@",
+        "phone": 9599237376,
+        "address":"ansal API",
+        "city":"Lucknow",
+        "State": "UP",
+        "type": "home"
+        }
+    ]
+}

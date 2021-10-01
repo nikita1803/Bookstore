@@ -20,6 +20,8 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { FilterPipe } from './filter.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { StarsComponent } from './components/stars/stars.component';
+import { MyprofileComponent } from './components/myprofile/myprofile.component';
+
 
 
 
@@ -40,6 +42,7 @@ import { StarsComponent } from './components/stars/stars.component';
     WishlistComponent,
     FilterPipe,
     StarsComponent,
+    MyprofileComponent,
     
     
   ],
