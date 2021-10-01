@@ -13,6 +13,9 @@
     margin: 0px 253px 0px 253px;
     
 }
+.serchtext{
+    width: 570px;height: 70px;
+}
 .bookblock{
    background-color: #FFFFFF; 
    height: 90%; 
@@ -37,7 +40,7 @@
     background-color: #FFFFFF; 
     width: 48.2%;
     //height: 38.2%;
-    //background-color: chartreuse;
+   
 }
 
 .imgCell{
@@ -245,4 +248,106 @@
     height:20px;width: 20px;
     margin-right: 10px;
 }
-// star rating
+@media (max-width: 768px){
+    .mainblock{
+        margin-left:60px;
+        width:100%;        
+    }
+    .bookblock{
+        flex-wrap: wrap;
+    }
+    .subimg{
+        background-color: #FFFFFF; 
+        width: 3.5%;
+        margin-left: 120px;
+        //background-color: brown;
+    }
+    
+    .mainImg{
+        background-color: #FFFFFF; 
+        width: 48.2%;
+        //height: 38.2%;
+        //background-color: chartreuse;
+    }
+    .book_description{
+        background-color: #FFFFFF; 
+        width: 63%;
+        padding: 0px 0px 0px 10px;
+        //background-color: blueviolet;
+        margin-top:20px;
+        margin-left: 20px;;
+    }
+    .alternateButton{
+        
+        margin-left:-25px
+    }
+    .button{
+        margin-top: 95px;
+        
+    }
+}
+@media (max-width: 425px){
+    .main{
+        width: 30%;
+        //background-color: #5730a0;
+    }
+    .subimg{
+        background-color: #FFFFFF; 
+        width: 3.5%;
+        margin-left: -52px;
+        flex-wrap: nowrap;
+    }
+    .mainImg{
+        background-color: #FFFFFF; 
+        width: 100px;
+        margin-left:35px;
+        margin-top:0px;
+        
+        //height: 38.2%;
+        //background-color: chartreuse;
+    }
+    .alternateButton{
+        width:370px;
+        margin-left:-25px;
+    }
+    .description{
+        margin-left: -50px;
+    }
+    .author{
+        margin-left: -50px;
+    }
+    .booker{
+        margin-left: -50px;
+    }
+    .price{
+        margin-left: -50px;
+    }
+    .divider{
+        margin-left: -90px;
+        width: 425px;
+    }
+    .details{
+        margin-left: -50px;
+        width:450%;
+    }
+    .bookContent{
+        width: 95%;
+    }
+    .customerfeed{
+        margin-left: -50px;
+    }
+    .review{
+        margin-left: -10px;
+        width:330px;
+    }
+    .searchInput{
+        width:10%;
+    }
+    .serchtext{
+        width: 330px;
+    }
+    .button{
+        margin-left:250px;
+    }
+
+}

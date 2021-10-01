@@ -16,7 +16,7 @@
            <mat-icon [matMenuTriggerFor] = "menu" class = "headerButton">person</mat-icon>
            <mat-menu class = "profile" #menu = "matMenu" xPosition = "before">
                 <div class = "profileMenu">
-                    <h5>Profile</h5>
+                    <h5 style = "cursor: pointer" (click)="profile()">Profile</h5>
                     <h5 >My Orders</h5>
                     <h5 style = "cursor: pointer" (click)="wishlist()">My Wishlist</h5>
                 </div>
@@ -24,7 +24,7 @@
                     Log Out
                 </button>
             </mat-menu>
-           <h5 style = "margin: 0; color:#FCFCFC;">Profile</h5>
+           <h5 style = "margin: 0; color:#FCFCFC;" >Profile</h5>
        </div>
        <div class = "bookcart" routerLink="cart" >
            <mat-icon [matBadge]="badgeContent" matBadgeSize="small" class = "headerButton" (click)="cartPage()"> local_grocery_store</mat-icon>

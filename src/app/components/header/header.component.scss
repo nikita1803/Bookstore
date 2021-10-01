@@ -94,7 +94,7 @@
         border: transparent;
     }
 }
-@media (max-width : 414px){
+@media (max-width : 425px){
     .searchInput {
         display: none;
         background : #A03037;
@@ -128,4 +128,7 @@
         width:400px;
         margin-left:-270px;   
     }    
+    .header{
+        width:100%;
+    }
 }

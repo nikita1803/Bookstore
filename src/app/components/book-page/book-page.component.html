@@ -4,7 +4,7 @@
     <app-header></app-header>
 
     <!-- Book Content -->
-    <div >
+    <div class="main" >
     <div class = "mainblock">
         <div class = "sub-heading" style = "margin-left: -30px;">
             <a (click)="homepage()" >Home</a>/books
@@ -33,7 +33,7 @@
             <div class = "book_description">
                 <p class = "description" >{{data.description}}</p>
                 <p class = "author" >by {{data.author}}</p>
-                <div style = "display: flex;">
+                <div class="booker" style = "display: flex;">
                     <div class = "rate">
                         <p style = "color: white; margin: 0; width: 20px; height: 19px; text-align: left;
                         font: normal normal bold 14px/19px Roboto;"> 4.5</p>
@@ -52,14 +52,14 @@
                     </div>
                 </div>
                 <mat-divider class = "divider" style = "margin-top: -35px;"></mat-divider>
-                <div style = "margin-top: 10px;">
+                <div class="customerfeed" style = "margin-top: 10px;">
                     <h3>Coustomer Feedback</h3>
                     <div class = "review">
                         <h5 class = "text">overall rating</h5>
                         <app-stars></app-stars>
                         
                         <div class = "searchInput" >
-                            <textarea matInput class = "searchInput" type = "text" placeholder = "write a review" style = "width: 570px;height: 70px;"  name="comment" #box></textarea>
+                            <textarea matInput class = "serchtext" type = "text" placeholder = "write a review"   name="comment" #box></textarea>
                         </div>
                         <div>
                             <button type = "submit" class = "button" mat-flat-button color = "warn" (click)="getVal(box.value)">Submit</button>

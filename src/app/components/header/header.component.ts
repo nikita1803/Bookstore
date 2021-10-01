@@ -38,5 +38,8 @@ export class HeaderComponent implements OnInit {
   searchThis() {
     this.searchcriteria.emit(this.searchText);
   }
+  profile(){
+    this.router.navigate(['myprofile']);
+  }
 
 }
