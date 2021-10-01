@@ -1,6 +1,6 @@
 <!--<p>add-cart works!</p>-->
 <div class="container">
-    <app-header class="header"></app-header>
+    <app-header class="header" style="position: relative;"></app-header>
 
     <div class="main">
         <div class="sub-head">
@@ -38,10 +38,10 @@
             
             <div class="placeOrder">
                 <div class="location">
-                    <div style="display: flex;align-items: flex-end;">
+                    <div class="local" style="display: flex;align-items: flex-end;">
                         <mat-icon> pin_drop</mat-icon> Use current location 
                     </div>
-                        <mat-icon>expand_more</mat-icon>
+                        <mat-icon class="expand">expand_more</mat-icon>
                 </div>
                 <div class="order" *ngIf="displayButton" (click)="addressToggles()">
                     PLACE ORDER
@@ -61,14 +61,14 @@
         <form class="custermerAddress" *ngIf="!displayAddress" (ngSubmit)="submit()" [formGroup]="contactForm">
             <div style=" width: 75%;">
                 <h2 class="details">Customer Details</h2>
-                <div style="display: flex; justify-content: space-between;">
-                    <div>
-                        <h4 style="margin: 0px;" class="textName">Full Name</h4>
+                <div class="firstrow" style="display: flex; justify-content: space-between;">
+                    <div class="fname"> 
+                        <h4 style="margin: 0px; " class="textName">Full Name</h4>
                         <mat-form-field appearance="outline" class="placewidth" >
-                            <input matInput placeholder="" formControlName="fullName" >
+                            <input  matInput placeholder="" formControlName="fullName" >
                         </mat-form-field>
                     </div>
-                    <div>
+                    <div class="phone">
                         <h4 style="margin: 0px;" class="textName">Mobile Number</h4>
                         <mat-form-field appearance="outline" class="placewidth">
                             <input matInput placeholder="" formControlName="phone">
@@ -81,7 +81,7 @@
                         <input matInput placeholder="" formControlName="fullAddress">
                     </mat-form-field>
                 </div>
-                <div style="display: flex; justify-content: space-between; margin-top: 35px;">
+                <div class="add"style="display: flex; justify-content: space-between; margin-top: 35px;">
                     <div>
                         <h4 style="margin: 0px;" class="textName">City/town</h4>
                         <mat-form-field appearance="outline" class="placewidth">
@@ -123,7 +123,7 @@
         <div class="address" *ngIf="displayCart">
             <span>Order Summary</span>
         </div>
-        <div class="cart" *ngIf="!displayCart">            
+        <div class="cart card" *ngIf="!displayCart">            
             <div>
                 <ng-container *ngFor="let cartBook of cartBooks">
                     <div class="book" style=" flex-direction: row;">
@@ -142,7 +142,7 @@
             </div>
             
             <div class="checkoutOrder">
-                <div (click) = "checkout()" class="order">
+                <div (click) = "checkout()" class="checkoutorder">
                     CHEACKOUT
                 </div>
             </div>
