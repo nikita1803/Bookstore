@@ -1,0 +1,84 @@
+<!--<p>myprofile works!</p>-->
+<app-header></app-header>
+<div class="main" *ngFor="let person of personlist">
+    
+     <div style="background-color: #FFFFFF; height: 5%; padding-top: 14px">
+        <span class="home"(click)="homepage()">Home /</span><span class="book-id">Profile</span>
+    </div>
+    <div>
+        <h2 class="details" style="padding-top: 20px;">Personal Details</h2>
+
+        <div  >
+            <div >
+                <h4 style="margin: 0px;" class="textName">Full Name</h4>
+                <mat-form-field appearance="outline" class="placewidth" >
+                    <input matInput placeholder="" name="first-name" [ngModel]='person.full_name'>
+                </mat-form-field>
+            </div>
+
+
+            <div>
+                <h4 style="margin: 0px;" class="textName" >email</h4>
+                <mat-form-field appearance="outline" class="placewidth" >
+                    <input matInput placeholder="" name="email"  [ngModel]='person.email'>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <h4 style="margin: 0px;" class="textName">password</h4>
+                <mat-form-field appearance="outline" class="placewidth">
+                    <input matInput placeholder="" name="password" [ngModel]='person.password'>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <h4 style="margin: 0px;" class="textName">Mobile Number</h4>
+                <mat-form-field appearance="outline" class="placewidth" >
+                    <input matInput placeholder="" name="phone" [ngModel]='person.phone'>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+    <div>
+       
+            <div style=" width: 75%;">
+                <h2 class="details">Address Details</h2>
+                <div style="margin-top: 20px;">
+                    <h4 style="margin: 0px;" class="textName">Address</h4>
+                    <mat-form-field appearance="outline" class="addressWidth">
+                        <input matInput placeholder=""  [ngModel]='person.address'>
+                    </mat-form-field>
+                </div>
+                <div class="add" style="display: flex; justify-content:space-between;flex-wrap: wrap; margin-top: 35px;">
+                    <div>
+                        <h4 style="margin: 0px;" class="textName">City/town</h4>
+                        <mat-form-field appearance="outline" class="placewidth1">
+                            <input matInput placeholder="" [ngModel]='person.city'>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0px;" class="textName">State</h4>
+                        <mat-form-field appearance="outline" class="placewidth1">
+                            <input matInput placeholder=""  [ngModel]='person.State'>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="margin-top: 10px;" class="textName">Type</h4>
+                    <mat-radio-group >
+                        <mat-radio-button class="example-margin" value="Home">Home</mat-radio-button>
+                        <mat-radio-button class="example-margin" value="Office">Office</mat-radio-button>
+                        <mat-radio-button class="example-margin" value="Other">Other</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div class="newAddress" >
+                    <span style="color: #A03037; padding: 20px 0px 20px 19px;">Add New Address</span>
+                </div>
+            </div>
+           
+        
+    </div>
+</div>
